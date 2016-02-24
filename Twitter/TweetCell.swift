@@ -31,7 +31,7 @@ class TweetCell: UITableViewCell {
     
     weak var delegate: TweetCellDelegate?
     
-    let favoritePressedImage = UIImage(named: "like-action-on.png")! as UIImage
+    //let favoritePressedImage = UIImage(named: "like-action-on.png")! as UIImage
     
     
     var tweet: Tweet!{

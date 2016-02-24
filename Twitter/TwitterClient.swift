@@ -23,16 +23,14 @@ class TwitterClient: BDBOAuth1SessionManager {
         loginSuccess = success
         loginFailure = failure
         
-        
-        TwitterClient.sharedInstance.deauthorize()
-        TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "twitterdemo://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
+               TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "twitterdemo://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
             let url = NSURL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token)")!
             UIApplication.sharedApplication().openURL(url)
             
             }) { (error: NSError!) -> Void in
                 print("error: \(error.localizedDescription)")
                 self.loginFailure?(error)
-        }
+        }/*
         TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "POST", callbackURL: NSURL(string: "twitteroauthdemom://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
             let url = NSURL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token)")!
             UIApplication.sharedApplication().openURL(url)
@@ -41,10 +39,11 @@ class TwitterClient: BDBOAuth1SessionManager {
                 print("error: \(error.localizedDescription)")
                 self.loginFailure?(error)
                 
-        }
+        }*/
     }
     func currentAccount(success: (User) -> (), failure: (NSError) -> ()) {
         GET("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            print(response)
             let userDictionary = response as! NSDictionary
             let user = User(dictionary: userDictionary)
             
@@ -138,7 +137,7 @@ class TwitterClient: BDBOAuth1SessionManager {
     func openUrl(url: NSURL) {
         let requestToken = BDBOAuth1Credential(queryString: url.query)
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: requestToken, success: { (accessToken: BDBOAuth1Credential!) -> Void in
-            
+            //    print("got access Token")
             self.currentAccount({ (user: User) -> () in
                 User.currentUser = user
                 self.loginSuccess?()
