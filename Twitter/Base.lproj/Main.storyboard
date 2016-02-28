@@ -6,6 +6,124 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="k3f-1Q-FtD">
+            <objects>
+                <viewController id="f6Z-Yk-Jw9" customClass="DetailsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jfE-L1-dPr"/>
+                        <viewControllerLayoutGuide type="bottom" id="OGt-Ob-FMS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VAz-sz-8wr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-gN-cfU">
+                                <rect key="frame" x="20" y="72" width="48" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maggie Gates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkC-XK-NaY">
+                                <rect key="frame" x="76" y="72" width="107" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@mgates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbw-Bn-MOc">
+                                <rect key="frame" x="76" y="95" width="53" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vON-ME-a3f">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="hJ9-DL-gqk"/>
+                        <barButtonItem key="rightBarButtonItem" title="Reply" id="VDj-KN-gqN"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pha-fK-zQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="1077"/>
+        </scene>
+        <!--Me-->
+        <scene sceneID="ZcS-RS-FDr">
+            <objects>
+                <viewController id="5p4-kT-3ty" customClass="ProfileViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Me" id="YMw-am-5Yu">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="o0k-p2-xaZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Compose" id="7P4-RD-Au2"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSz-2m-526" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-474"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="yPw-6N-jHx">
+            <objects>
+                <viewController id="gta-HO-z8y" customClass="ComposeViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lhc-Y0-Lg9"/>
+                        <viewControllerLayoutGuide type="bottom" id="m2M-hA-dmK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kdc-88-5Ht">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maggie Gates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKa-Ke-Pgl">
+                                <rect key="frame" x="82" y="72" width="107" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@mgates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-eb-Ok0">
+                                <rect key="frame" x="82" y="95" width="53" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Tweet goes here...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0dQ-e6-IZ4">
+                                <rect key="frame" x="0.0" y="128" width="320" height="287"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PbF-kV-ryM" appends="YES" id="xf6-5s-4PX"/>
+                                    <outletCollection property="gestureRecognizers" destination="bVU-V1-uq4" appends="YES" id="usl-fD-6Bj"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-Gc-BkO">
+                                <rect key="frame" x="20" y="72" width="48" height="48"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZQs-Xh-IKy">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="gYa-qj-Q6j">
+                            <connections>
+                                <action selector="cancelOnButton:" destination="gta-HO-z8y" id="Gol-T2-9Ge"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="XiY-he-cDD">
+                            <connections>
+                                <action selector="tweetOnButton:" destination="gta-HO-z8y" id="13x-WD-0H1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="handleLabel" destination="CEM-eb-Ok0" id="eQf-Fc-cWL"/>
+                        <outlet property="nameLabel" destination="aKa-Ke-Pgl" id="iTK-1n-s6T"/>
+                        <outlet property="profileImage" destination="gvI-Gc-BkO" id="BeA-0W-DbI"/>
+                        <outlet property="tweetOnButton" destination="XiY-he-cDD" id="BoQ-ZL-Z7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKX-TN-rjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PbF-kV-ryM"/>
+                <tapGestureRecognizer id="bVU-V1-uq4"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="370"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,7 +138,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlY-Fg-6bM">
                                 <rect key="frame" x="42" y="388" width="236" height="68"/>
-                                <color key="backgroundColor" red="0.1876359447" green="0.87670605619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Login with Twitter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,9 +157,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="320"/>
+            <point key="canvasLocation" x="-51" y="378"/>
         </scene>
-        <!--Tweets View Controller-->
+        <!--Home-->
         <scene sceneID="dYf-vc-6Vb">
             <objects>
                 <viewController storyboardIdentifier="TweetsViewController" id="dlv-XH-Qef" customClass="TweetsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,12 +204,6 @@
                                                         <color key="titleColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVI-Rk-EPD">
-                                                    <rect key="frame" x="82" y="34" width="230" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rihanna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9H-yQ-LjU">
                                                     <rect key="frame" x="82" y="16" width="56" height="17"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -100,10 +212,14 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2u-Ka-5iW">
                                                     <rect key="frame" x="8" y="14" width="66" height="69"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="66" id="5Qd-Ce-7vQ"/>
                                                         <constraint firstAttribute="height" constant="69" id="T27-8Y-2g3"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="w9p-4B-isj" appends="YES" id="6ai-Z6-dY4"/>
+                                                    </connections>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-dJ-8gs">
                                                     <rect key="frame" x="216" y="67" width="30" height="30"/>
@@ -111,6 +227,16 @@
                                                         <color key="titleColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVI-Rk-EPD">
+                                                    <rect key="frame" x="82" y="34" width="230" height="41"/>
+                                                    <gestureRecognizers/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="DUr-eI-iTW" appends="YES" id="NNN-I0-I6B"/>
+                                                    </connections>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lVI-Rk-EPD" firstAttribute="leading" secondItem="o9H-yQ-LjU" secondAttribute="leading" id="0hH-tA-oWw"/>
@@ -155,20 +281,41 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NHb-xr-lnj">
+                    <navigationItem key="navigationItem" title="Home" id="NHb-xr-lnj">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="ovh-QM-kHo">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onLogoutButton:" destination="dlv-XH-Qef" id="VlJ-dU-164"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Compose" id="gGo-4A-5c1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Ohf-TF-NuH" kind="modal" id="sDf-LG-u3E"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="ovh-QM-kHo" id="kxH-ft-6GW"/>
+                            <outlet property="rightBarButtonItem" destination="gGo-4A-5c1" id="NoX-V9-pld"/>
+                        </connections>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="UPr-Ou-VtY" id="EVL-h9-LZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQ1-V0-Hvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w9p-4B-isj">
+                    <connections>
+                        <segue destination="mRX-Qh-dfz" kind="push" id="npq-Dt-HdD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="DUr-eI-iTW">
+                    <connections>
+                        <segue destination="f6Z-Yk-Jw9" kind="push" id="BP9-RS-8uR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="929" y="320"/>
+            <point key="canvasLocation" x="525" y="294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="To4-SQ-CrX">
@@ -186,7 +333,65 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjs-L5-bBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="320"/>
+            <point key="canvasLocation" x="21" y="294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NIh-dl-hds">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BLR-a5-MLg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tgA-V9-MGO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f6Z-Yk-Jw9" kind="relationship" relationship="rootViewController" id="olJ-iK-N0k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xo8-11-g2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="993"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GPn-IO-SwI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mRX-Qh-dfz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WyR-Vm-xkp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Gt-eZ-Sce">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5p4-kT-3ty" kind="relationship" relationship="rootViewController" id="VRc-oJ-TOU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2u-fD-W9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="-527"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="03A-VV-yYd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ohf-TF-NuH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5pv-4J-67b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gta-HO-z8y" kind="relationship" relationship="rootViewController" id="v9F-OS-tJb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtd-1f-HC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="294"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BP9-RS-8uR"/>
+    </inferredMetricsTieBreakers>
 </document>

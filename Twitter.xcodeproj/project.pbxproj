@@ -12,6 +12,9 @@
 		9F46E06F1C74042C00B120E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F46E06D1C74042C00B120E6 /* Main.storyboard */; };
 		9F46E0711C74042C00B120E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F46E0701C74042C00B120E6 /* Assets.xcassets */; };
 		9F46E0741C74042C00B120E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F46E0721C74042C00B120E6 /* LaunchScreen.storyboard */; };
+		9F879B151C838A8D000F1CC1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F879B131C838A8D000F1CC1 /* DetailsViewController.swift */; };
+		9F879B181C838B0B000F1CC1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F879B171C838B0B000F1CC1 /* ProfileViewController.swift */; };
+		9F879B1A1C838B20000F1CC1 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F879B191C838B20000F1CC1 /* ComposeViewController.swift */; };
 		9F9855C81C769F7A00DD39C6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9855C71C769F7A00DD39C6 /* LogInViewController.swift */; };
 		9F9855CA1C7AB06A00DD39C6 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9855C91C7AB06A00DD39C6 /* TwitterClient.swift */; };
 		9F9855CC1C7AB09700DD39C6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9855CB1C7AB09700DD39C6 /* Tweet.swift */; };
@@ -29,6 +32,9 @@
 		9F46E0701C74042C00B120E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F46E0731C74042C00B120E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F46E0751C74042C00B120E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F879B131C838A8D000F1CC1 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		9F879B171C838B0B000F1CC1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9F879B191C838B20000F1CC1 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		9F9855C71C769F7A00DD39C6 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9F9855C91C7AB06A00DD39C6 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		9F9855CB1C7AB09700DD39C6 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 			children = (
 				9F9855C71C769F7A00DD39C6 /* LogInViewController.swift */,
 				9F9855CD1C7AB0C200DD39C6 /* TweetsViewController.swift */,
+				9F879B131C838A8D000F1CC1 /* DetailsViewController.swift */,
+				9F879B171C838B0B000F1CC1 /* ProfileViewController.swift */,
+				9F879B191C838B20000F1CC1 /* ComposeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -252,8 +261,11 @@
 				9F9855CA1C7AB06A00DD39C6 /* TwitterClient.swift in Sources */,
 				9F9855D51C7ABB3F00DD39C6 /* TweetCell.swift in Sources */,
 				9F9855CC1C7AB09700DD39C6 /* Tweet.swift in Sources */,
+				9F879B151C838A8D000F1CC1 /* DetailsViewController.swift in Sources */,
 				9F9855CE1C7AB0C200DD39C6 /* TweetsViewController.swift in Sources */,
+				9F879B1A1C838B20000F1CC1 /* ComposeViewController.swift in Sources */,
 				9F46E06A1C74042C00B120E6 /* AppDelegate.swift in Sources */,
+				9F879B181C838B0B000F1CC1 /* ProfileViewController.swift in Sources */,
 				9F9855C81C769F7A00DD39C6 /* LogInViewController.swift in Sources */,
 				9F9855D01C7AB0E800DD39C6 /* User.swift in Sources */,
 			);

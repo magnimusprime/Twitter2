@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.0, green: 255, blue: 255, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+
+        
         if User.currentUser != nil {
             // go to the logged in screen
             print("Current user detected: \(User.currentUser?.name)")
