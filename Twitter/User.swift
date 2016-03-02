@@ -15,6 +15,8 @@ class User: NSObject {
     var name: NSString?
     var screenname: NSString!
     var profileUrl: NSURL?
+    var coverString: String?
+    var coverUrl: NSURL?
     var tagline: NSString?
     var dictionary: NSDictionary?
     
@@ -24,6 +26,14 @@ class User: NSObject {
         
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
+        
+        coverString = dictionary["profile_banner_url"]  as? String
+        
+        
+        if coverString != nil {
+            
+            coverUrl = NSURL(string: coverString!)!
+        }
         
         let imageURLString = dictionary["profile_image_url_https"] as? String
         if imageURLString != nil {

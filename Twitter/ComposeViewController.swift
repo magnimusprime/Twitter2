@@ -8,23 +8,28 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var handleLabel: UILabel!
-
+    @IBOutlet weak var tweetTextField: UITextField!
+    @IBOutlet weak var textCount: UILabel!
     
-    @IBAction func tweetOnButton(sender: UIBarButtonItem) {
-    }
-    
-    @IBAction func cancelOnButton(sender: UIBarButtonItem) {
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        tweetTextField.delegate = self
+        
+        profileImage.setImageWithURL((User.currentUser?.profileUrl)!)
+        
+        nameLabel.text = User.currentUser?.name as String?
+        handleLabel.text = "@\((User.currentUser?.screenname)!)"
+        
+        
     }
+    
+  
     
 }
