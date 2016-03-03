@@ -9,7 +9,6 @@
         <!--Details View Controller-->
         <scene sceneID="k3f-1Q-FtD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pha-fK-zQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="f6Z-Yk-Jw9" customClass="DetailsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jfE-L1-dPr"/>
@@ -65,6 +64,7 @@
                         <outlet property="tweetLabel" destination="yNw-TH-oww" id="Kku-G7-m3X"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pha-fK-zQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="337" y="943"/>
         </scene>
@@ -121,13 +121,18 @@
                                 <segue destination="dlv-XH-Qef" kind="push" id="bed-AU-1aQ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="XiY-he-cDD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="XiY-he-cDD">
+                            <connections>
+                                <action selector="updateStatusAction:" destination="gta-HO-z8y" id="Cdy-Bq-GWe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="handleLabel" destination="CEM-eb-Ok0" id="eQf-Fc-cWL"/>
                         <outlet property="nameLabel" destination="aKa-Ke-Pgl" id="iTK-1n-s6T"/>
                         <outlet property="profileImage" destination="gvI-Gc-BkO" id="BeA-0W-DbI"/>
                         <outlet property="textCount" destination="IfY-FI-5Nd" id="3gt-y3-SvT"/>
+                        <outlet property="tweetButton" destination="XiY-he-cDD" id="vq5-Ak-vPg"/>
                         <outlet property="tweetTextField" destination="0dQ-e6-IZ4" id="Y8N-QX-I9k"/>
                     </connections>
                 </viewController>
@@ -419,7 +424,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ahT-gO-FG0"/>
+        <segue reference="bed-AU-1aQ"/>
         <segue reference="tBB-xs-smJ"/>
     </inferredMetricsTieBreakers>
 </document>

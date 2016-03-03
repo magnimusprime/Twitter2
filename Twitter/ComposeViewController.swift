@@ -15,6 +15,7 @@ class ComposeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var handleLabel: UILabel!
     @IBOutlet weak var tweetTextField: UITextField!
     @IBOutlet weak var textCount: UILabel!
+    @IBOutlet weak var tweetButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -30,6 +31,21 @@ class ComposeViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-  
-    
+    @IBAction func updateStatusAction(sender: AnyObject) {
+        
+        print("tweet button pressed")
+        
+        let tweetStatus = tweetTextField.text!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        
+        print(tweetStatus)
+        
+        TwitterClient.sharedInstance.tweetWithCompletion(["status": tweetStatus]) { (tweet, error) -> () in
+            
+            self.view.endEditing(true)
+            
+            
+            User.currentUser?.tweeted()
+            print(tweetStatus)
+        }
+    }
 }

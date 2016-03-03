@@ -19,6 +19,8 @@ class User: NSObject {
     var coverUrl: NSURL?
     var tagline: NSString?
     var dictionary: NSDictionary?
+    let userDidTweetNotification = "userDidTweetNotification"
+
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -77,5 +79,10 @@ class User: NSObject {
             defaults.synchronize()
         }
     }
+    func tweeted() {
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(userDidTweetNotification, object: nil)
+    }
+
 }
     
